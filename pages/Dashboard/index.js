@@ -14,9 +14,8 @@ import { Wallet, TrendingUp, TrendingDown } from "lucide-react";
 const Dashboard = () => {
   const [income, setIncome] = useState([]);
   const [expense, setExpense] = useState([]);
-const [token, setToken] = useState(null); // null = not loaded yet
+const [token, setToken] = useState(null); 
 
-  // ✅ Load token safely after mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedToken = window.localStorage?.getItem("token");
