@@ -14,17 +14,8 @@ import { Wallet, TrendingUp, TrendingDown } from "lucide-react";
 const Dashboard = () => {
   const [income, setIncome] = useState([]);
   const [expense, setExpense] = useState([]);
-  const [token, setToken] = useState("");
 
-  useEffect(() => {
-  if (typeof window !== "undefined") {
-    const savedToken = localStorage.getItem("token");
-    if (savedToken) {
-      setToken(savedToken);
-    }
-  }
-}, [typeof window !== "undefined" && localStorage.getItem("token")]);
-
+  const token = localStorage.getItem("token") || "";
 
   const api = axios.create({
     baseURL: "https://be-production-4ef6.up.railway.app",
