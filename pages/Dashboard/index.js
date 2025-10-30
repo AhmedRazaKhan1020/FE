@@ -17,11 +17,14 @@ const Dashboard = () => {
   const [token, setToken] = useState("");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedToken = localStorage.getItem("token") || "";
+  if (typeof window !== "undefined") {
+    const savedToken = localStorage.getItem("token");
+    if (savedToken) {
       setToken(savedToken);
     }
-  }, []);
+  }
+}, [typeof window !== "undefined" && localStorage.getItem("token")]);
+
 
   const api = axios.create({
     baseURL: "https://be-production-4ef6.up.railway.app",
