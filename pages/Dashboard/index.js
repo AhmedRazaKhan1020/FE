@@ -27,7 +27,7 @@ const [token, setToken] = useState(null);
     if (!token) return; 
 
   const api = axios.create({
-    baseURL: "https://be-production-4ef6.up.railway.app",
+    baseURL: "https://be-xi-sooty.vercel.app",
     headers: { Authorization: `Bearer ${token}` },
   });
 

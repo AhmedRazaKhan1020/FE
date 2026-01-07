@@ -26,7 +26,7 @@ import { Eye, EyeOff } from "lucide-react";
     setError(null);
 
     try {
-      const response = await fetch("https://be-production-4ef6.up.railway.app/auth/login", {
+      const response = await fetch("https://be-xi-sooty.vercel.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

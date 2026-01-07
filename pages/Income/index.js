@@ -12,7 +12,7 @@ import {
 import { Plus, Download, Trash2 } from "lucide-react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
-const API = "https://be-production-4ef6.up.railway.app/income";
+const API = "https://be-xi-sooty.vercel.app/income";
 
 const Token = () => localStorage.getItem("token") || "";
 
